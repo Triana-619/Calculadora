@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SenoActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="#F5F5F5">
 
-        <TextView
-            android:id="@+id/lbltitulo"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:padding="16dp"
-            android:text="Calculadora"
-            android:textColor="#6200EE"
-            android:textSize="24sp" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculadora de Seno"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:padding="16dp"
+                android:textColor="#6200EE"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,36 +32,36 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <Button
-                android:id="@+id/btnseno"
+            <EditText
+                android:id="@+id/txtopuesto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#BB86FC"
-                android:text="Función Seno" />
+                android:padding="12dp"
+                android:hint="Ingresa la longitud del lado opuesto"
+                android:inputType="numberDecimal"/>
+            <EditText
+                android:id="@+id/txthipotenusa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:hint="Ingresa la longitud de la hipotenusa"
+                android:inputType="numberDecimal"/>
 
             <Button
-                android:id="@+id/btncoseno"
+                android:id="@+id/btncalcularseno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:text="Calcular Seno"
                 android:backgroundTint="#BB86FC"
-                android:text="Función Coseno" />
+                android:layout_marginTop="16dp"/>
 
-            <Button
-                android:id="@+id/btnraiz"
+            <TextView
+                android:id="@+id/lblresultado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#BB86FC"
-                android:text="Raíz" />
-
-            <Button
-                android:id="@+id/btnperimetro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#BB86FC"
-                android:text="Perímetro" />
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"/>
         </LinearLayout>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
