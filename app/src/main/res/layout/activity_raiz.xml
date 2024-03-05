@@ -6,4 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".RaizActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F5F5F5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculadora de Raíz Cuadrada"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:padding="16dp"
+                android:textColor="#6200EE"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/txtnum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:hint="Ingresa un número"
+                android:inputType="numberDecimal"/>
+
+            <Button
+                android:id="@+id/btncalcularraiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calcular Raíz Cuadrada"
+                android:backgroundTint="#BB86FC"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/lblresultado_raiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
