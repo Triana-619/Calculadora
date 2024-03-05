@@ -1,67 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- activity_main.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SenoActivity">
+
+    <!-- Título -->
+    <LinearLayout
+        android:id="@+id/layoutprin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/lbltitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculadora de Seno"
+            android:textSize="24sp"
+            android:textColor="#6200EE"/>
+    </LinearLayout>
+
+    <!-- Contenedor para el ángulo y los RadioButtons -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#F5F5F5">
+        app:layout_constraintTop_toBottomOf="@id/layoutprin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- RadioButtons para seleccionar el tipo de ángulo -->
+        <RadioGroup
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
+            <RadioButton
+                android:id="@+id/radbtngrados"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Calculadora de Seno"
-                android:textSize="24sp"
-                android:gravity="center_horizontal"
-                android:padding="16dp"
-                android:textColor="#6200EE"/>
-        </LinearLayout>
+                android:padding="14dp"
+                android:text="Grados" />
 
-        <LinearLayout
+            <RadioButton
+                android:id="@+id/radbtnradianes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:text="Radianes" />
+        </RadioGroup>
+
+        <!-- EditText para ingresar el ángulo -->
+        <EditText
+            android:id="@+id/txtanguloseno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="12dp"
+            android:hint="Ingrese el ángulo"
+            android:inputType="numberDecimal" />
 
-            <EditText
-                android:id="@+id/txtopuesto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:hint="Ingresa la longitud del lado opuesto"
-                android:inputType="numberDecimal"/>
-            <EditText
-                android:id="@+id/txthipotenusa"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:hint="Ingresa la longitud de la hipotenusa"
-                android:inputType="numberDecimal"/>
-
-            <Button
-                android:id="@+id/btncalcularseno"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Calcular Seno"
-                android:backgroundTint="#BB86FC"
-                android:layout_marginTop="16dp"/>
-
-            <TextView
-                android:id="@+id/lblresultado"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp"/>
-        </LinearLayout>
+        <!-- Botón para calcular el seno -->
+        <Button
+            android:id="@+id/btncalcularseno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calcular Seno" />
     </LinearLayout>
 
+    <!-- Resultado -->
+    <TextView
+        android:id="@+id/lblresultadoseno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layoutprin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
