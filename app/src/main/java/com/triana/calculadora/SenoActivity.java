@@ -1,6 +1,8 @@
 package com.triana.calculadora;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,7 +46,9 @@ public class SenoActivity extends AppCompatActivity {
                 } else if (radianes.isChecked()) {
                     // Ángulo en radianes
                     double sinValue = Math.sin(angle);
-                    resultado.setText("Seno: " + sinValue);
+                    Intent intent = new Intent(SenoActivity.this, ResultadoActivity.class);
+                    intent.putExtra("resultado", sinValue); // Aquí "coseno" es la clave para el extra
+                    startActivity(intent);
                 } else {
                     resultado.setText("Por favor, selecciona el tipo de ángulo.");
                 }

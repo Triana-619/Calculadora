@@ -1,6 +1,8 @@
 package com.triana.calculadora;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,7 +35,9 @@ public class PerimetroActivity extends AppCompatActivity {
                     double side2 = Double.parseDouble(side2String);
                     double side3 = Double.parseDouble(side3String);
                     double perimetro = side1 + side2 + side3;
-                    resultado.setText("Perímetro: " + perimetro);
+                    Intent intent = new Intent(PerimetroActivity.this, ResultadoActivity.class);
+                    intent.putExtra("resultado", perimetro); // Aquí "coseno" es la clave para el extra
+                    startActivity(intent);
                 } else {
                     resultado.setText("Por favor, ingresa las longitudes de los tres lados del triángulo.");
                 }

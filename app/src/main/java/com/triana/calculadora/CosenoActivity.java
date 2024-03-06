@@ -38,7 +38,7 @@ public class CosenoActivity extends AppCompatActivity {
                     double radianes = radioGrados.isChecked() ? Math.toRadians(angulo) : angulo;
                     double coseno = Math.cos(radianes);
                     Intent intent = new Intent(CosenoActivity.this, ResultadoActivity.class);
-                    intent.putExtra("coseno", coseno); // Aquí "coseno" es la clave para el extra
+                    intent.putExtra("resultado", coseno); // Aquí "coseno" es la clave para el extra
                     startActivity(intent);
                 } else {
                     resultado.setText("Por favor, ingresa un ángulo.");

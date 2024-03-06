@@ -15,9 +15,9 @@ public class ResultadoActivity extends AppCompatActivity {
         txtResultado = findViewById(R.id.txtResultado); // Ajusta el ID según tu diseño
 
         // Obtén el valor del coseno enviado desde la CosenoActivity
-        double coseno = getIntent().getDoubleExtra("coseno", 0.0); // 0.0 es el valor predeterminado
+        double resultado = getIntent().getDoubleExtra("resultado", 0.0); // 0.0 es el valor predeterminado
 
         // Muestra el resultado en el TextView
-        txtResultado.setText("Coseno: " + coseno);
+        txtResultado.setText("Resultado: " + resultado);
     }
 }
