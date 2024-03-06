@@ -22,7 +22,7 @@
             android:id="@+id/lbltitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calculadora de Seno"
+            android:text="@string/calculadora_seno"
             android:textSize="24sp"
             android:textColor="#6200EE"/>
     </LinearLayout>
@@ -48,14 +48,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="14dp"
-                android:text="Grados" />
+                android:text="@string/grados_seno" />
 
             <RadioButton
                 android:id="@+id/radbtnradianes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="14dp"
-                android:text="Radianes" />
+                android:text="@string/radianes_seno" />
         </RadioGroup>
 
         <!-- EditText para ingresar el ángulo -->
@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12dp"
-            android:hint="Ingrese el ángulo"
+            android:hint="@string/angulo_seno"
             android:inputType="numberDecimal" />
 
         <!-- Botón para calcular el seno -->
@@ -72,17 +72,17 @@
             android:id="@+id/btncalcularseno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calcular Seno" />
+            android:text="@string/calcular_seno" />
+
+        <TextView
+            android:id="@+id/lblresultadoseno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutprin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
     </LinearLayout>
 
-    <!-- Resultado -->
-    <TextView
-        android:id="@+id/lblresultadoseno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/layoutprin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -8,7 +8,6 @@
     tools:context=".PerimetroActivity">
 
   <LinearLayout
-      xmlns:android="http://schemas.android.com/apk/res/android"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:orientation="vertical"
@@ -22,7 +21,7 @@
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="Calculadora de Perímetro"
+          android:text="@string/calculadora_perimetro"
           android:textSize="24sp"
           android:gravity="center_horizontal"
           android:padding="16dp"
@@ -40,7 +39,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:padding="12dp"
-          android:hint="Ingresa la longitud del primer lado"
+          android:hint="@string/longitud1_perimetro"
           android:inputType="numberDecimal"/>
 
       <EditText
@@ -48,7 +47,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:padding="12dp"
-          android:hint="Ingresa la longitud del segundo lado"
+          android:hint="@string/longitud2_perimetro"
           android:inputType="numberDecimal"/>
 
       <EditText
@@ -56,14 +55,14 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:padding="12dp"
-          android:hint="Ingresa la longitud del tercer lado"
+          android:hint="@string/longitud3_perimetro"
           android:inputType="numberDecimal"/>
 
       <Button
           android:id="@+id/btncalcularperimetro"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="Calcular Perímetro"
+          android:text="@string/calcular_perimetro"
           android:backgroundTint="#BB86FC"
           android:layout_marginTop="16dp"/>
 

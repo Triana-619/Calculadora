@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,13 +18,14 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/lbltitulocoseno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Calculadora de Coseno"
-                android:textSize="24sp"
                 android:gravity="center_horizontal"
                 android:padding="16dp"
-                android:textColor="#6200EE"/>
+                android:text="@string/calcular_coseno"
+                android:textColor="#6200EE"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -34,26 +35,37 @@
             android:padding="16dp">
 
             <EditText
-                android:id="@+id/txtadyacente"
+                android:id="@+id/txtangulocoseno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="12dp"
-                android:hint="Ingresa la longitud del lado adyacente"
+                android:hint="@string/angulo_de_coseno"
                 android:inputType="numberDecimal"/>
 
-            <EditText
-                android:id="@+id/txthipotenusacoseno"
+            <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:hint="Ingresa la longitud de la hipotenusa"
-                android:inputType="numberDecimal"/>
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/gradoscoseno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/grados_coseno"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/radianescoseno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radianes_coseno"/>
+            </RadioGroup>
 
             <Button
                 android:id="@+id/btncalcular_coseno"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Calcular Coseno"
+                android:text="@string/btn_calcular_coseno"
                 android:backgroundTint="#BB86FC"
                 android:layout_marginTop="16dp"/>
 
