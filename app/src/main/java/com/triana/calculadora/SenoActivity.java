@@ -42,7 +42,9 @@ public class SenoActivity extends AppCompatActivity {
                     // Ángulo en grados
                     double radians = Math.toRadians(angle);
                     double sinValue = Math.sin(radians);
-                    resultado.setText("Seno: " + sinValue);
+                    Intent intent = new Intent(SenoActivity.this, ResultadoActivity.class);
+                    intent.putExtra("resultado", sinValue); // Aquí "coseno" es la clave para el extra
+                    startActivity(intent);
                 } else if (radianes.isChecked()) {
                     // Ángulo en radianes
                     double sinValue = Math.sin(angle);
@@ -52,6 +54,7 @@ public class SenoActivity extends AppCompatActivity {
                 } else {
                     resultado.setText("Por favor, selecciona el tipo de ángulo.");
                 }
+
             }
         });
     }
